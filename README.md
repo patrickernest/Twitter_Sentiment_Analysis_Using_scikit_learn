@@ -35,18 +35,18 @@ Supervised Classifiers
 
 We focused our efforts on making four classifiers: SVM, Logistic Regression, Naive Bayes, and an ensemble method classifier. Each of these has a set of parameters that we spent time tweaking in order to improve our results. For example, we compared the value of $\alpha$ in the SVM and found that setting $\alpha = .0001$ seemed to give the best results, as displayed by the graph in figure 2. We also tested classifiers using one sentiment lexicon downloaded from Dr. Bing Liu’s website (https://www.cs.uic.edu/ liub/FBS/sentiment-analysis.html) and one lexicon from the University of Pittsberg (http://mpqa.cs.pitt.edu/lexicons/), however, we did not see much improvement to the scores, and in some cases, noticeable decreases in performance.
 
-<img width="444" alt="ngram" src="https://cloud.githubusercontent.com/assets/10784357/22178104/e1a19544-dff3-11e6-9d27-1cfb53d877ea.png">
+<img width="444" alt="ngram" src="https://cloud.githubusercontent.com/assets/10784357/22178104/e1a19544-dff3-11e6-9d27-1cfb53d877ea.png"><br />
 Figure 1: The effect of using 1-, 2-, and 3-grams on four classifiers.
 
-<img width="564" alt="svmalphaeffect" src="https://cloud.githubusercontent.com/assets/10784357/22178116/31537170-dff4-11e6-9270-631d2588c788.png">
+<img width="564" alt="svmalphaeffect" src="https://cloud.githubusercontent.com/assets/10784357/22178116/31537170-dff4-11e6-9270-631d2588c788.png"><br />
 Figure 2: Values of alpha affecting the output of our SVM Classifier. Note that the x-axis in the $-log$ scale.
 
 In the end, our best supervised classifier in terms of accuracy and F score ended up being the SVM for Obama, which gave the most consistent results for these values. Our results for all four classifiers are in figures 3 and 4.
 
-<img width="347" alt="obamasupervised" src="https://cloud.githubusercontent.com/assets/10784357/22178131/8b5be40e-dff4-11e6-88fe-425599842b42.png">
+<img width="347" alt="obamasupervised" src="https://cloud.githubusercontent.com/assets/10784357/22178131/8b5be40e-dff4-11e6-88fe-425599842b42.png"><br />
 Figure 3: Obama results.
 
-<img width="352" alt="romneysupervised" src="https://cloud.githubusercontent.com/assets/10784357/22178124/5b0af182-dff4-11e6-9bc7-5f606990548f.png">
+<img width="352" alt="romneysupervised" src="https://cloud.githubusercontent.com/assets/10784357/22178124/5b0af182-dff4-11e6-9bc7-5f606990548f.png"><br />
 Figure 4: Romney Results.
 
 Extension: Semi-Supervised Classifiers
@@ -57,10 +57,10 @@ In supervised learning, the labels on all training data are known. In semi-super
 In the previous section all of the classifiers performed supervised learning on tweets that were labeled with a 0, 1, or -1. However, the original data given to us contained tweets that were given a score of 2. For this project, we were instructed not to use these tweets in the training data, as we only needed to consider the positive, negative, and
 neutral class. We thought that an interesting extension would be to try to apply semi-supervised learning, using the tweets that were originally labeled as 2 (and thus not in any of the training sets in the supervised classifiers) as unlabeled training data. The results indicate that using semi-supervised learning to create more training data improves the classifiers across the board, but just slightly. We report our findings with the following graph of, which compares the accuracy, F scores, precision, and recall of our classifiers using semi-supervised and supervised learning.
 
-<img width="349" alt="obamasemisupervised" src="https://cloud.githubusercontent.com/assets/10784357/22178121/52529838-dff4-11e6-950e-7fdcf7dd5a9f.png">
+<img width="349" alt="obamasemisupervised" src="https://cloud.githubusercontent.com/assets/10784357/22178121/52529838-dff4-11e6-950e-7fdcf7dd5a9f.png"><br />
 Figure 5: Results for Obama tweets using semi-supervised learning.
 
-<img width="360" alt="romneysemisupervised" src="https://cloud.githubusercontent.com/assets/10784357/22178133/8d9e9694-dff4-11e6-9308-ab9d62d54a92.png">
+<img width="360" alt="romneysemisupervised" src="https://cloud.githubusercontent.com/assets/10784357/22178133/8d9e9694-dff4-11e6-9308-ab9d62d54a92.png"><br />
 Figure 6: Results for Romney tweets using semi-supervised learning.
 
 Conclusion
